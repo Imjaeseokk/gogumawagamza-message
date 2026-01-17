@@ -1,0 +1,58 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>gogumawagamza</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" type="image/png" href="./favicon.png">
+</head>
+<body>
+  <!-- <div class="InputContainer">
+    <input id="src" class="input" type="text" placeholder="Message..." autocomplete="off" />
+  </div> -->
+  <input id = "src" type="text" placeholder="Message..." name="text" class="input">
+  <div class="button-wrapper">
+    <button id="tableBtn" type="button" aria-label="Show mapping table" title="Show mapping table">
+    <!-- table/grid icon (svg) -->
+        <svg class="table-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+            <path d="M3 10h18"></path>
+            <path d="M9 20V4"></path>
+            <path d="M15 20V4"></path>
+        </svg>
+    </button>
+    <button id="copyBtn" type="button">
+      <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+      </svg>
+      <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </button>
+  </div>
+  <div id="dst" class="out"></div>
+
+  <div id="mapPopover" class="popover" hidden>
+      <div class="popover-head">
+        <div class="popover-title"></div>
+        <div class="popover-sub"></div>
+    </div>
+
+    <div class="map-grid">
+        <div class="map-col">
+        <div class="map-col-title">자음</div>
+        <div id="consTable" class="map-table"></div>
+        </div>
+        <div class="map-col">
+        <div class="map-col-title">모음</div>
+        <div id="vowTable" class="map-table"></div>
+        </div>
+    </div>
+    </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
